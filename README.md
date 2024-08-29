@@ -22,6 +22,23 @@ Vue CLI v5.0.8
 ? Where do you prefer placing config for Babel, ESLint, etc.? `In dedicated config files`
 ```
 
+## Add quasar
+
+```shell
+vue add quasar
+```
+
+```shell
+✔  Successfully installed plugin: vue-cli-plugin-quasar
+
+? Allow Quasar to replace App.vue, About.vue, Home.vue and (if available) router.js? `Yes`
+? Pick your favorite CSS preprocessor: `SCSS`
+? Choose Quasar Icon Set `Material`
+? Default Quasar language pack - one from https://github.com/quasarframework/quasar/tree/dev/ui/lang `en-US`
+? Use RTL support? `No`
+? Select features: `Material, Material Outlined`
+```
+
 ## Project setup
 
 ```shell
