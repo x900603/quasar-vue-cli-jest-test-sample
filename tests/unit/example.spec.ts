@@ -1,12 +1,23 @@
-import { shallowMount } from "@vue/test-utils";
+import { mount } from "@vue/test-utils";
 import HelloWorld from "@/components/HelloWorld.vue";
+import { installQuasarPlugin } from "@quasar/quasar-app-extension-testing-unit-jest";
+import { QBtn } from "quasar";
+
+installQuasarPlugin();
 
 describe("HelloWorld.vue", () => {
-  it("renders props.msg when passed", () => {
-    const msg = "new message";
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg },
-    });
-    expect(wrapper.text()).toMatch(msg);
+  it("QBtn correct render and ", () => {
+    const wrapper = mount(HelloWorld);
+
+    const btnElement = wrapper.find("button.q-btn");
+
+    expect(btnElement.exists()).toBe(true);
+    expect(wrapper.findComponent(QBtn).exists()).toBe(true);
+
+    expect(wrapper.emitted()).not.toHaveProperty("click-btn");
+
+    btnElement.trigger("click");
+
+    expect(wrapper.emitted()).toHaveProperty("click-btn");
   });
 });

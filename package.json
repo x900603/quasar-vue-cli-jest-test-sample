@@ -12,11 +12,13 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "core-js": "^3.8.3",
-    "quasar": "^2.16.0",
+    "quasar": "2.15.4",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
+    "@quasar/babel-preset-app": "^2.0.3",
+    "@quasar/quasar-app-extension-testing-unit-jest": "^3.0.2",
     "@types/jest": "^27.0.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",

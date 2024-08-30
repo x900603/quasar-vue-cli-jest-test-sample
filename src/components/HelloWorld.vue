@@ -1,12 +1,10 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="../assets/logo.svg"
-      style="width: 200px; height: 200px"
-    />
-    <b-btn @click="emit('click-btn')">Test Emit</b-btn>
-  </q-page>
+  <img
+    alt="Quasar logo"
+    src="../assets/logo.svg"
+    style="width: 200px; height: 200px"
+  />
+  <q-btn @click="emit('click-btn')">Test Emit</q-btn>
 </template>
 
 <script setup lang="ts">
