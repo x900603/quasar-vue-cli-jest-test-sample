@@ -3,10 +3,10 @@ import HelloWorld from "@/components/HelloWorld.vue";
 import { installQuasarPlugin } from "@quasar/quasar-app-extension-testing-unit-jest";
 import { QBtn } from "quasar";
 
-installQuasarPlugin();
+installQuasarPlugin({ components: { QBtn } });
 
 describe("HelloWorld.vue", () => {
-  it("QBtn correct render and ", () => {
+  it("QBtn correct render and emit click-btn event", () => {
     const wrapper = mount(HelloWorld);
 
     const btnElement = wrapper.find("button.q-btn");
